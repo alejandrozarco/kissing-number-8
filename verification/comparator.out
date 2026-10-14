@@ -1,0 +1,53 @@
+Building Kissing8.Statement
+WARNING: THIS IS NOT REAL LANDRUN! UNSAFELY RUNNING exec lake build Kissing8.Statement
+⚠ [8924/8924] Built Kissing8.Statement (208s)
+warning: Kissing8/Statement.lean:37:8: declaration uses `sorry`
+warning: Kissing8/Statement.lean:42:8: declaration uses `sorry`
+warning: Kissing8/Statement.lean:46:8: declaration uses `sorry`
+warning: Kissing8/Statement.lean:56:8: declaration uses `sorry`
+warning: Kissing8/Statement.lean:62:8: declaration uses `sorry`
+warning: Kissing8/Statement.lean:68:8: declaration uses `sorry`
+Build completed successfully (8924 jobs).
+WARNING: THIS IS NOT REAL LANDRUN! UNSAFELY RUNNING exec <tools>/lean4export/.lake/build/bin/lean4export Kissing8.Statement -- Quot Quot.mk Quot.lift Quot.ind Kissing8.exists_isKissing_encard_eq_twoHundredForty Kissing8.encard_le_twoHundredForty_of_isKissing Kissing8.kissingNumber_eight Kissing8.isKissing_antipodal Kissing8.not_isKissing_close Kissing8.not_isKissing_far propext Quot.sound Classical.choice Nat.add Nat.sub Nat.mul Nat.pow Nat.gcd Nat.div Nat.mod Nat.beq Nat.ble Nat.land Nat.lor Nat.xor Nat.shiftLeft Nat.shiftRight String.ofList Char.ofNat List eagerReduce Nat String String.mk Char optParam autoParam semiOutParam outParam
+Exporting #[Quot, Quot.mk, Quot.lift, Quot.ind, Kissing8.exists_isKissing_encard_eq_twoHundredForty, Kissing8.encard_le_twoHundredForty_of_isKissing, Kissing8.kissingNumber_eight, Kissing8.isKissing_antipodal, Kissing8.not_isKissing_close, Kissing8.not_isKissing_far, propext, Quot.sound, Classical.choice, Nat.add, Nat.sub, Nat.mul, Nat.pow, Nat.gcd, Nat.div, Nat.mod, Nat.beq, Nat.ble, Nat.land, Nat.lor, Nat.xor, Nat.shiftLeft, Nat.shiftRight, String.ofList, Char.ofNat, List, eagerReduce, Nat, String, String.mk, Char, optParam, autoParam, semiOutParam, outParam] from Kissing8.Statement
+Building Kissing8.Solution
+WARNING: THIS IS NOT REAL LANDRUN! UNSAFELY RUNNING exec lake build Kissing8.Solution
+✔ [8924/8934] Built Kissing8.TwoForty (106s)
+✔ [8925/8934] Built Kissing8.Kernel (14s)
+⚠ [8926/8934] Built Kissing8.Addition3 (24s)
+warning: Kissing8/Addition3.lean:55:2: Unused tactic linter: `push_cast` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+⚠ [8927/8934] Built Kissing8.Addition4 (23s)
+warning: Kissing8/Addition4.lean:55:2: Unused tactic linter: `push_cast` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+⚠ [8928/8934] Built Kissing8.Addition5 (23s)
+warning: Kissing8/Addition5.lean:55:2: Unused tactic linter: `push_cast` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+⚠ [8929/8934] Built Kissing8.Addition6 (23s)
+warning: Kissing8/Addition6.lean:55:2: Unused tactic linter: `push_cast` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+⚠ [8930/8934] Built Kissing8.Addition7 (23s)
+warning: Kissing8/Addition7.lean:55:2: Unused tactic linter: `push_cast` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+⚠ [8931/8934] Built Kissing8.Addition8 (23s)
+warning: Kissing8/Addition8.lean:55:2: Unused tactic linter: `push_cast` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+✔ [8932/8934] Built Kissing8.Positivity (14s)
+✔ [8933/8934] Built Kissing8.Delsarte (16s)
+✔ [8934/8934] Built Kissing8.Solution (15s)
+Build completed successfully (8934 jobs).
+WARNING: THIS IS NOT REAL LANDRUN! UNSAFELY RUNNING exec <tools>/lean4export/.lake/build/bin/lean4export Kissing8.Solution -- Quot Quot.mk Quot.lift Quot.ind Kissing8.exists_isKissing_encard_eq_twoHundredForty Kissing8.encard_le_twoHundredForty_of_isKissing Kissing8.kissingNumber_eight Kissing8.isKissing_antipodal Kissing8.not_isKissing_close Kissing8.not_isKissing_far propext Quot.sound Classical.choice Nat.add Nat.sub Nat.mul Nat.pow Nat.gcd Nat.div Nat.mod Nat.beq Nat.ble Nat.land Nat.lor Nat.xor Nat.shiftLeft Nat.shiftRight String.ofList Char.ofNat List eagerReduce Nat String String.mk Char optParam autoParam semiOutParam outParam
+Exporting #[Quot, Quot.mk, Quot.lift, Quot.ind, Kissing8.exists_isKissing_encard_eq_twoHundredForty, Kissing8.encard_le_twoHundredForty_of_isKissing, Kissing8.kissingNumber_eight, Kissing8.isKissing_antipodal, Kissing8.not_isKissing_close, Kissing8.not_isKissing_far, propext, Quot.sound, Classical.choice, Nat.add, Nat.sub, Nat.mul, Nat.pow, Nat.gcd, Nat.div, Nat.mod, Nat.beq, Nat.ble, Nat.land, Nat.lor, Nat.xor, Nat.shiftLeft, Nat.shiftRight, String.ofList, Char.ofNat, List, eagerReduce, Nat, String, String.mk, Char, optParam, autoParam, semiOutParam, outParam] from Kissing8.Solution
+Running Lean default kernel on solution.
+Lean default kernel accepts the solution
+Your solution is okay!
+real 1075.69
+user 514.24
+sys 139.76
+COMPARATOR EXIT: 0

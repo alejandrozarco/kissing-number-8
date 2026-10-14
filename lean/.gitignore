@@ -1,0 +1,6 @@
+.lake/
+.tools/
+logs/*.out
+.bt.*
+build_test.tsv
+axioms.out

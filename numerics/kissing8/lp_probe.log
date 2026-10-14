@@ -1,0 +1,23 @@
+n = 8: deg f = 6; f_k >= 0: True; zero coefficients at k = []; bound f(1)/f_0 = 240
+   f_k = ['3/320', '3/40', '15/64', '39/80', '399/640', '9/16', '33/128']
+   max denominator of f_k: 640
+n = 24: deg f = 10; f_k >= 0: True; zero coefficients at k = []; bound f(1)/f_0 = 196560
+   f_k = ['15/1490944', '45/186368', '3795/1949696', '10005/905216', '3983025/101384192', '56235/487424', '2040905/8716288', '270135/661504', '16675/34816', '150075/330752', '310155/1323008']
+   max denominator of f_k: 101384192
+n = 8, degree 2: LP bound The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is At lower/fixed bound)
+n = 8, degree 3: LP bound The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is Basic)
+n = 8, degree 4: LP bound The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is Basic)
+n = 8, degree 5: LP bound 323.99977510737705
+n = 8, degree 6: LP bound 239.99992418881246
+n = 8, degree 7: LP bound 239.99992418881288
+n = 8, degree 8: LP bound 239.99992418881396
+n = 24, degree 4: LP bound The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is At lower/fixed bound)
+n = 24, degree 5: LP bound The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is Basic)
+n = 24, degree 6: LP bound The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is Basic)
+n = 24, degree 7: LP bound The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is Basic)
+n = 24, degree 8: LP bound The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is Basic)
+n = 24, degree 9: LP bound 277287.14432305534
+n = 24, degree 10: LP bound 196559.39360145008
+n = 24, degree 11: LP bound 196559.39360144813
+n = 24, degree 12: LP bound 196559.39360144894
+n = 24, degree 13: LP bound 196559.39020510972

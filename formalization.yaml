@@ -1,0 +1,139 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/mathlib-initiative/formalization.yaml/main/schema/formalization.schema.json
+# formalization.yaml (v0.4): repo-root metadata for formalization projects.
+
+version: "v0.4"
+
+project:
+  name: "kissing-number-8: the kissing number in dimension 8"
+  description: >-
+    An AI-produced warrant, meaning a machine-checked Lean proof that no human has digested, of the theorem that the
+    kissing number of R^8 is 240 (Levenshtein 1979; Odlyzko and Sloane 1979). Lower bound: 240 points with integer
+    coordinates (Construction A of the extended Hamming code, a copy of the E8 root system). Upper bound: the
+    two-point (Delsarte) bound with the polynomial (t+1)(t+1/2)^2 t^2 (t-1/2), with a Lean proof of the positivity of
+    the Gegenbauer kernels of S^7 for degrees up to 6 by induction on the dimension. Depends on Mathlib only.
+  authors:
+    - "alejandrozarco (repository owner; directed the work)"
+    - "Claude Opus 5.5 (Anthropic), AI model that produced the Lean code"
+  responsible_maintainers:
+    - "alejandrozarco"
+  license: "Apache-2.0 (LICENSE)"
+
+sources:
+  - title: "On bounds for packings in n-dimensional Euclidean space"
+    authors: ["V. I. Levenshtein"]
+    id: "Soviet Math. Dokl. 20 (1979), 417-421"
+    type: "article"
+    relationship: "formalizes"
+    note: "The upper bound 240 by the linear programming method; the polynomial used here."
+    author_endorsement: "not-contacted"
+  - title: "New bounds on the number of unit spheres that can touch a unit sphere in n dimensions"
+    authors: ["A. M. Odlyzko", "N. J. A. Sloane"]
+    id: "J. Combin. Theory Ser. A 26 (1979), 210-214"
+    type: "article"
+    relationship: "formalizes"
+    note: "The same bound, found independently."
+    author_endorsement: "not-contacted"
+  - title: "Spherical codes and designs"
+    authors: ["P. Delsarte", "J.-M. Goethals", "J. J. Seidel"]
+    id: "Geom. Dedicata 6 (1977), 363-388"
+    type: "article"
+    relationship: "background"
+    note: "The linear programming bound for spherical codes."
+    author_endorsement: "not-contacted"
+
+related_formalizations:
+  - id: "https://github.com/math-inc/Sphere-Packing-Lean"
+    relationship: "related"
+    note: "Sphere packing in dimensions 8 and 24 (E8 lattice; in dimension 24 the two-point bound 196560 and the Leech lattice). No code used."
+  - id: "https://github.com/alejandrozarco/kissing-number-3"
+    relationship: "related"
+    note: "The same statement for d = 3 (three-point certificate)."
+  - id: "https://github.com/alejandrozarco/kissing-number-4"
+    relationship: "related"
+    note: "The same statement for d = 4 (three-point certificate)."
+
+classification:
+  arxiv: ["math.MG", "math.CO"]
+  msc2020: ["52C17", "05B40", "33C45", "03B35"]
+
+status:
+  scope: "kappa(8) = 240, with arrangements of any cardinality (sizes in ENat)."
+  sorry_count: 0
+  sorry_in_definitions: 0
+  axioms: ["propext", "Classical.choice", "Quot.sound"]
+  main_results:
+    - declaration: "Kissing8.kissingNumber_eight"
+      file: "lean/Kissing8/Solution.lean"
+      sorry_count: 0
+      axioms: ["propext", "Classical.choice", "Quot.sound"]
+      comparator_config: "lean/comparator.json"
+      literature_dependencies: []
+    - declaration: "Kissing8.encard_le_twoHundredForty_of_isKissing"
+      file: "lean/Kissing8/Solution.lean"
+      sorry_count: 0
+      axioms: ["propext", "Classical.choice", "Quot.sound"]
+      comparator_config: "lean/comparator.json"
+      literature_dependencies: []
+    - declaration: "Kissing8.exists_isKissing_encard_eq_twoHundredForty"
+      file: "lean/Kissing8/Solution.lean"
+      sorry_count: 0
+      axioms: ["propext", "Classical.choice", "Quot.sound"]
+      comparator_config: "lean/comparator.json"
+      literature_dependencies: []
+  notes: >-
+    Statement file: lean/Kissing8/Statement.lean (sorry by design). Comparator, axioms and a clean build of a fresh copy
+    of the package are recorded in verification/. No `native_decide`.
+
+automation:
+  methods:
+    - method: "agent"
+      models: ["claude-opus-5-5"]
+      framework: "Claude Code"
+      tool_setup: >-
+        Claude Opus 5.5 with terminal access (one sub-agent instance for the lower-bound module). Python (sympy,
+        scipy) for the identities, coefficients and checks. Lean 4 v4.34.1 + Mathlib, modules built one at a time on a
+        Linux workstation.
+      cost:
+        wall_time: "about 1 day (2026-10-13)"
+        spend_usd: "subscription-based usage"
+        hardware: "Apple-silicon laptop; Linux workstation (6 cores, 19 GB RAM) for Lean builds"
+      prompting_notes: >-
+        The owner set the goal, approved the statement file and decided on scope and publication. Plans and results
+        are recorded in a development journal (not public).
+    - method: "agent"
+      models: ["gpt-6-astra"]
+      framework: "Codex CLI"
+      tool_setup: "A separate read-only reviewer instance without the working context."
+      prompting_notes: "Adversarial review of statement fidelity, the positivity induction, the bound and the points; see AI_DISCLOSURE.md."
+  spend_usd: "subscription-based usage (not separately metered)"
+  notes: "See AI_DISCLOSURE.md."
+
+fidelity:
+  divergences: >-
+    - The positivity of the Gegenbauer kernels is proved for the degrees used (up to 6), not in general.
+    - The 240 points are an integer model of the E8 roots scaled by sqrt 2 (an isometric copy), not the roots in their
+      usual coordinates.
+
+review:
+  status: "agent-reviewed"
+  reviewers:
+    - "gpt-6-astra (read-only reviewer instance)"
+  notes: "No human expert has checked the formalisation. Comments and checks are welcome via GitHub issues."
+
+alignment:
+  namespace: "Kissing8"
+  statements:
+    - source: "kappa(8) = 240 (Levenshtein 1979; Odlyzko and Sloane 1979)"
+      lean: "Kissing8.kissingNumber_eight"
+      module: "lean/Kissing8/Solution.lean (statement: lean/Kissing8/Statement.lean)"
+      status: "proved"
+    - source: "every kissing arrangement in R^8 has at most 240 balls"
+      lean: "Kissing8.encard_le_twoHundredForty_of_isKissing"
+      module: "lean/Kissing8/Solution.lean (statement: lean/Kissing8/Statement.lean)"
+      status: "proved"
+    - source: "240 balls can touch a central ball in R^8"
+      lean: "Kissing8.exists_isKissing_encard_eq_twoHundredForty"
+      module: "lean/Kissing8/Solution.lean (statement: lean/Kissing8/Statement.lean)"
+      status: "proved"
+
+acknowledgements: "Uses Mathlib, Lean 4, and Python libraries (sympy, scipy, numpy, matplotlib)."
