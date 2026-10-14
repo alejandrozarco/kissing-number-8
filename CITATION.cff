@@ -2,6 +2,7 @@ cff-version: 1.2.0
 message: "If you use this material, please cite it as below. Not peer reviewed. Produced by AI models under the direction of the repository owner (see AI_DISCLOSURE.md)."
 title: "The kissing number in dimension 8 is 240: a Lean 4 formalisation of the two-point bound"
 type: software
+doi: "10.5281/zenodo.23368500"
 license: Apache-2.0
 repository-code: "https://github.com/alejandrozarco/kissing-number-8"
 authors:

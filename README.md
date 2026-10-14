@@ -1,5 +1,7 @@
 # The kissing number in dimension 8: a Lean 4 formalisation of the two-point bound
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23368500.svg)](https://doi.org/10.5281/zenodo.23368500)
+
 Status: **Lean 4 formalisation, not peer reviewed.** Prepared 2026-10-13. **Produced by AI models** under the direction
 of the repository owner; see [`AI_DISCLOSURE.md`](AI_DISCLOSURE.md).
 
@@ -10,9 +12,12 @@ of the repository owner; see [`AI_DISCLOSURE.md`](AI_DISCLOSURE.md).
 > theorem was settled in 1979; we do not regard this formal argument as settled until it has been checked
 > independently.
 > Independent verification and human-readable expositions are welcome, and credit for a human-readable proof belongs
-> to whoever writes one. To refer to the computational result, please cite the archived repository (Zenodo DOI to be
-> added on archiving). Questions, checks and corrections:
+> to whoever writes one. To refer to the computational result, please cite the archived repository
+> ([10.5281/zenodo.23368500](https://doi.org/10.5281/zenodo.23368500)). Questions, checks and corrections:
 > [GitHub issues](https://github.com/alejandrozarco/kissing-number-8/issues).
+
+Archived on Zenodo: [10.5281/zenodo.23368500](https://doi.org/10.5281/zenodo.23368500) (all versions).
+Cite with `CITATION.cff`.
 
 The kissing number $`\kappa(d)`$ is the largest number of non-overlapping unit balls in $`\mathbb{R}^d`$ that touch a
 common unit ball. `lean/Kissing8/Statement.lean` states, and the Lean kernel checks in `lean/Kissing8/Solution.lean`:
